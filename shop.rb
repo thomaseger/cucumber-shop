@@ -48,26 +48,6 @@ class CommandlineInterface
     @shop = Shop.new
   end
 
-  def read(msg)
-    puts msg
-    print "> "
-    input = gets.chomp
-
-    if input.eql? "exit"
-      exit
-    else
-      input
-    end
-  end
-
-  def findArticle(name) 
-    for article in @articles
-      if name.eql? article.name
-        return article
-      end
-    end
-  end
-
   def run
     while true 
       puts "I have "
@@ -85,6 +65,27 @@ class CommandlineInterface
         puts "Sorry not enough in stock."
       end
       puts 
+    end
+  end
+
+private 
+  def read(msg)
+    puts msg
+    print "> "
+    input = gets.chomp
+
+    if input.eql? "exit"
+      exit
+    else
+      input
+    end
+  end
+
+  def findArticle(name) 
+    for article in @articles
+      if name.eql? article.name
+        return article
+      end
     end
   end
 
