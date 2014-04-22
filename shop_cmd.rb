@@ -1,4 +1,5 @@
 require_relative 'shop'
+require_relative 'article'
 
 class CommandlineInterface 
   
