@@ -14,6 +14,10 @@ class Article
     @stock
   end
 
+  def setStock(stock) 
+    @stock = stock
+  end
+
   def available(amount = -1)
     @stock >= amount
   end

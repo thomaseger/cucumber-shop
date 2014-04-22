@@ -8,16 +8,16 @@ Given(/^the article "(.*?)"$/) do |article|
 end
 
 Given(/^the article exists (\d+) times$/) do |stock|
-  @article.stock = stock
+  @article.setStock(stock.to_i)
 end
 
 When(/^the shop sells (\d+)$/) do |amount|
   shop = Shop.new
-  shop.sell(amount, @article)
+  shop.sell(amount.to_i, @article)
 end
 
 Then(/^the stock should be (\d+)$/) do |stock|
-  @article.stock.should eq stock
+  @article.stock.should eq stock.to_i
 end
 
 
