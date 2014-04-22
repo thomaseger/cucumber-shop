@@ -1,3 +1,5 @@
+require_relative 'article'
+
 class Shop
 
   def sell(amount, article)
