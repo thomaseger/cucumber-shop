@@ -8,7 +8,7 @@ Given(/^the article "(.*?)"$/) do |article|
 end
 
 Given(/^the article exists (\d+) times$/) do |stock|
-  @article.setStock(stock.to_i)
+  @article.stock = stock.to_i
 end
 
 When(/^the shop sells (\d+)$/) do |amount|

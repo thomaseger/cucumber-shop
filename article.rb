@@ -14,7 +14,7 @@ class Article
     @stock
   end
 
-  def setStock(stock) 
+  def stock=(stock) 
     @stock = stock
   end
 
