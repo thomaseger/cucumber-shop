@@ -5,11 +5,12 @@ require_relative 'article'
 class CommandlineInterface 
   
   def initialize
-    banana = Article.new("Banana", 1.5, 10)
-    bread  = Article.new("Bread" , 0.5, 25)
-    juice  = Article.new("Juice" , 1.0, 15)
+    cucumber = Article.new("Cucumber", 2.0, 99)
+    banana   = Article.new("Banana"  , 1.5, 10)
+    bread    = Article.new("Bread"   , 0.5, 25)
+    juice    = Article.new("Juice"   , 1.0, 15)
 
-    @articles = [banana, bread, juice]
+    @articles = [cucumber, banana, bread, juice]
     @shop = Shop.new
   end
 
