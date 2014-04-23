@@ -1,3 +1,4 @@
+require 'colorize'
 require_relative 'shop'
 require_relative 'article'
 
@@ -16,7 +17,11 @@ class CommandlineInterface
     while true 
       puts "I have "
       for article in @articles do
-        puts " " + article.stock.to_s + " " + article.name + "s"
+        if article.stock == 0
+          puts " " + article.stock.to_s.red + " " + article.name + "s"
+        else
+          puts " " + article.stock.to_s.green + " " + article.name + "s"
+        end
       end
       
       name = read("Which article do you want to buy?")
@@ -24,9 +29,9 @@ class CommandlineInterface
       article = findArticle(name)
 
       if @shop.sell(amount.to_i, article)
-        puts "Ok, thanks. Next please!"
+        puts "Ok, thanks. Next please!".green
       else
-        puts "Sorry not enough in stock."
+        puts "Sorry not enough in stock.".red
       end
       puts 
     end

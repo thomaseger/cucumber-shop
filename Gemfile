@@ -4,4 +4,4 @@ ruby '2.0.0'
 
 gem 'cucumber'
 gem 'rspec'
-
+gem 'colorize'
