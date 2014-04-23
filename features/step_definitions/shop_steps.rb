@@ -11,6 +11,15 @@ Given(/^the article exists (\d+) times$/) do |stock|
   @article.stock = stock.to_i
 end
 
+Given(/^the article "(.*?)" exists (\d+) times$/) do |article, stock|
+  @article = Article.new(article, 1.0, stock.to_i)
+end
+
+When(/^the shop buys (\d+)$/) do |amount|
+  shop = Shop.new
+  shop.buy(amount.to_i, @article)
+end
+
 When(/^the shop sells (\d+)$/) do |amount|
   shop = Shop.new
   shop.sell(amount.to_i, @article)

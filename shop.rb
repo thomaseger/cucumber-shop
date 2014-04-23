@@ -11,4 +11,8 @@ class Shop
     return false
   end
 
+  def buy(amount, article) 
+    article.buy(amount)
+  end
+
 end

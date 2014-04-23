@@ -26,4 +26,8 @@ class Article
     @stock -= amount
   end
 
+  def buy(amount)
+    @stock += amount
+  end
+
 end
