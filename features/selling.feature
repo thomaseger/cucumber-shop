@@ -6,9 +6,9 @@ Feature: Selling
 		Then the stock should be <stockAfter>
 
 		Examples:
-			|article  | amount | stockBefore  | stockAfter |
-			|"Banana" | 1      | 5			  		| 4				   |
-			|"Juice"  | 5      | 5			  		|	0          |
+			|article     | amount | stockBefore  | stockAfter |
+			|"Cucumber"  | 5      | 5			  		 | 0          |
+			|"Banana"    | 1      | 5			  		 | 4 			    |
 
 	Scenario: Print an error message when there are not enough articles
 		Given the article "Cucumber" exists 10 times

@@ -8,5 +8,4 @@ Feature: Buying
     Examples:
       |article    | amount | stockBefore  | stockAfter |
       |"Cucumber" | 10     | 0            | 10         |
-      |"Bread"    | 20     | 5            | 25         |
-      |"Juice"    | 50     | 5            | 55         |
+      |"Banana"   | 50     | 5            | 55         |
