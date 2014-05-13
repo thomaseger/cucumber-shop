@@ -13,5 +13,5 @@ Feature: Selling
 	Scenario: Print an error message when there are not enough articles
 		Given the article "Cucumber" exists 10 times
 		When the shop sells 11
-		Then I should see an error message
+		Then I should get a negative feedback
 		And the article "Cucumber" exists 10 times
