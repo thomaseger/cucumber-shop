@@ -24,3 +24,22 @@ end
 Then(/^I should get a negative feedback$/) do
   @sold.should be false
 end
+
+
+Given(/^I am logged in$/) do
+  create_user_and_log_in()
+end
+
+Given(/^(\d+) "(.*?)" is in the basket$/) do |amount, article|
+  @articles = create_articles_in_basket(amount, article)
+end
+
+When(/^I access the basket$/) do
+  @page = visit("/basket")
+end
+
+Then(/^I should see the price for (\d+) "(.*?)"$/) do |amount, article|
+  article = @articles.find(article)
+  price = amount * article.price
+  @page.source.should_contain(price)
+end
